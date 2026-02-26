@@ -1,0 +1,650 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-soft: #f1f3f6;
+  --text: #1d2b3d;
+  --muted: #5f6d80;
+  --line: #e3e7ee;
+  --primary: #154ea5;
+  --primary-dark: #123f84;
+  --max: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', 'Trebuchet MS', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(var(--max), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(247, 248, 250, 0.95);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar-inner {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 0;
+}
+
+.topbar-inner a {
+  white-space: nowrap;
+}
+
+.divider {
+  color: #9aa4b3;
+}
+
+main {
+  padding-bottom: 20px;
+}
+
+.hero {
+  padding: clamp(28px, 4vw, 44px) 0 10px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  align-items: start;
+}
+
+.hero-main {
+  display: grid;
+  gap: 0;
+  max-width: 980px;
+}
+
+.hero-badge {
+  margin: 0 0 12px;
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--primary-dark);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(30px, 3.1vw, 46px);
+  max-width: 18ch;
+}
+
+.hero-text {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: clamp(15px, 1.2vw, 18px);
+  max-width: 62ch;
+}
+
+.hero-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  border: 0;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--primary-dark);
+  border: 1px solid var(--line);
+}
+
+.hero-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.hero-meta span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #445266;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--surface-soft);
+}
+
+.section {
+  padding-top: clamp(24px, 3.5vw, 42px);
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+}
+
+.section-title {
+  font-size: clamp(26px, 2.4vw, 38px);
+  margin-bottom: 10px;
+}
+
+.section-lead {
+  margin: 0;
+  max-width: 72ch;
+  color: var(--muted);
+  font-size: clamp(15px, 1.1vw, 17px);
+}
+
+.benefit-grid,
+.product-grid,
+.step-grid,
+.two-col,
+.calc-grid {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.benefit-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.benefit-card,
+.product-card,
+.panel,
+.step-card,
+.faq-item {
+  background: var(--surface);
+  border-radius: 10px;
+}
+
+.benefit-card,
+.panel,
+.step-card,
+.faq-item,
+.product-text {
+  padding: 14px;
+}
+
+.benefit-card h3,
+.product-text h3,
+.panel h3,
+.step-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.benefit-card p,
+.product-text p,
+.panel p,
+.step-card p,
+.faq-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.product-text p {
+  margin-bottom: 6px;
+}
+
+.product-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.product-card {
+  overflow: hidden;
+}
+
+.product-media {
+  margin: 0;
+  padding: 14px;
+  background: var(--surface-soft);
+  min-height: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-media img {
+  width: min(100%, 210px);
+  height: auto;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: #344459;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.calc-grid {
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 0;
+}
+
+.calc-shell {
+  margin-top: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  width: min(760px, 100%);
+}
+
+.calc-form,
+.calc-result {
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  padding: 16px 14px;
+}
+
+.calc-form {
+  display: grid;
+  gap: 12px;
+}
+
+.calc-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.calc-block-title {
+  font-size: 26px;
+  margin: 0;
+  color: #243754;
+}
+
+.calc-left-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.calc-right-title {
+  margin: 0 0 14px;
+  color: #8a97ab;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.calc-field {
+  display: grid;
+  gap: 7px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  color: #495a70;
+}
+
+.calc-field input,
+.calc-field select {
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 12px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  background: #fff;
+}
+
+.calc-field input:focus,
+.calc-field select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(21, 78, 165, 0.1);
+}
+
+.calc-result {
+  margin-top: 12px;
+  position: static;
+  top: auto;
+  background: #f7f8fb;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.calc-total-box {
+  margin-top: 0;
+  padding: 0 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.calc-total-box span {
+  font-size: 14px;
+  color: #2d3e58;
+  font-weight: 700;
+}
+
+.calc-total-box strong {
+  font-size: 24px;
+  line-height: 1;
+  color: var(--primary-dark);
+}
+
+.calc-kpis {
+  margin-top: 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.calc-kpis p {
+  margin: 0;
+  padding: 1px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #42536b;
+  font-size: 12px;
+}
+
+.calc-kpis strong {
+  color: #1f3557;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.calc-result .btn {
+  margin-top: 12px;
+  width: 100%;
+  min-height: 40px;
+  font-size: 13px;
+  border: 0;
+  box-shadow: none;
+}
+
+#calculator .section-lead {
+  display: none;
+}
+
+.request-form {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.request-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.request-form .btn[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-error {
+  margin-top: 10px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #efc6c6;
+  border-radius: 8px;
+  background: #fff6f6;
+  color: #9d2f2f !important;
+  font-size: 13px !important;
+}
+
+.form-success {
+  margin-top: 10px !important;
+  padding: 10px 12px !important;
+  border: 1px solid #cde6d2;
+  border-radius: 8px;
+  background: #f4fbf5;
+  color: #2f6c3b !important;
+  font-size: 13px !important;
+}
+
+.calc-result small {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.step-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.faq-item p {
+  margin-top: 8px;
+}
+
+.cta-block {
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.cta-block h2 {
+  font-size: clamp(24px, 2.1vw, 34px);
+}
+
+.cta-block p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+.site-footer {
+  margin-top: 30px;
+  background: var(--surface-soft);
+  border-top: 1px solid var(--line);
+  padding: 26px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.footer-grid h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-grid li,
+.footer-grid p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #445266;
+}
+
+.footer-bottom {
+  border-top: 1px solid #d9dfe9;
+  margin-top: 14px;
+  padding-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #5f6c7f;
+}
+
+@media (max-width: 1140px) {
+  .benefit-grid,
+  .product-grid,
+  .step-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .container {
+    width: min(var(--max), calc(100% - 26px));
+  }
+
+  .two-col,
+  .footer-grid,
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-result {
+    position: static;
+    top: auto;
+    background: var(--surface);
+  }
+
+  .calc-form-grid,
+  .request-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calc-shell {
+    width: 100%;
+  }
+
+  .calc-left-title {
+    font-size: 22px;
+  }
+
+  .calc-total-box span {
+    font-size: 15px;
+  }
+
+  .calc-total-box strong {
+    font-size: 30px;
+  }
+
+  .calc-kpis p {
+    font-size: 13px;
+  }
+
+  .calc-field input,
+  .calc-field select {
+    font-size: 14px;
+  }
+
+  .topbar-inner {
+    gap: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    width: calc(100% - 18px);
+  }
+
+  .benefit-grid,
+  .product-grid,
+  .step-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn,
+  .hero-actions {
+    width: 100%;
+  }
+
+  .divider {
+    display: none;
+  }
+}
